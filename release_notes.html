@@ -35,117 +35,13 @@
   <div class="section" id="release-notes">
 	<h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
 		<div class="section" id="release-3">
-			<h2><a class="headerlink" href="#release-3"></a>Release 3 - 1/25/2018</h2>
-			<p><b><em>Phenotypic Data</em></b></p>
-				<blockquote>
-					<p>Phenotypic data will be available for 1135 participants (688 male, 447 female), of which 1008 completed the study.</p>
-					<p>Prior to the second release, the following changes were made to the phenotypic protocol:</p>
-					<ol>
-						<li>Addition of the <a class = "reference internal" href ="assessments/ace.html">Adaptive Cognitive Assessment (ACE)</a></li>
-						<li>Addition of the <a class = "reference internal" href ="assessments/icut.html">Inventory of Callous-Unemotional Traits Self-Report (ICU-SR)</a></li>
-						<li>Addition of the <a class = "reference internal" href ="assessments/temp-disc.html">Temporal Discounting Task</a></li>
-						<li>More detailed data from the <a class = "reference internal" href ="assessments/nihtx.html">NIH Toolbox</a> (previous releases include only scores)</li>
-						<li>Removal of the <a class = "reference internal" href ="assessments/quotient.html">Quotient ADHD System</a></li>
-						<li>Inclusion of fitness protocol of aerobic capacity for participants over age 12</li>
-					</ol>
-					<p>To get an idea of which assessments have data from more participants, users should check the protocol timeline on the <a class = "reference internal" href ="updates.html">fixes and updates page</a>, which displays the changes in the HBN protocol since its inception.</p>
-					<p>Phenotypic data include all participants that completed their participation by December 1, 2017. These data are only available with a DUA.  Imaging data include all participants who had a scan as of December 1, 2017, regardless of whether or not they completed the remaining study visits. As such, some participants with imaging data will not have phenotypic data available in this release.  Their phenotypic data will be available in future releases.  A limited set of phenotypic variables (age, sex, and handedness) will be available without a DUA for these participants. This data can be found on the <a class = "reference internal" href = "sharing_neuro.html">download page</a> for the imaging data.</p>
-				</blockquote>
-			<p><b><em>Diagnostic Data</em></b></p>
-				<blockquote>
-					<p>Users should note that the assessment "ConsensusDx" has been changed to "Diagnosis_ClinicianConsensus" in order to address confusion with finding participant diagnostic information. In addition, diagnostic data from the computerized Kiddie Schedule for Affective Disorders and Schizophrenia (KSADS) will be available as "Diagnosis_KSADS," providing another option for diagnostic data. While for most participants, diagnoses will be consistent between the clinician consensus and the KSADS results (the clinician consensus diagnosis is determined from the KSADS results, as well as from other assessments), the clinician consensus diagnosis data include a wider range of diagnoses, including autism and learning disorders. </p>
-				</blockquote>
-			<p><b><em>Voice Recording Transcription Data</em></b></p>
-				<blockquote>
-					<p>Starting with Release 3, the Healthy Brain Network Biobank will release transcriptions of voice recordings taken after the MRI scan, where participants described the plot of The Present and their reaction to the film. These files (.txt, n = 232) will be available in the Document Repository on LORIS and under Study Docs in COINS.</p>
-				</blockquote>
-			<p><b><em>Citigroup Biomedical Imaging Center (CBIC) at Weill Cornell Medical College</em></b></p>
-				<blockquote>
-					<p>We are pleased to announce the addition of CBIC as a scan site for the Healthy Brain Network. Located in the Upper East Side of Manhattan, New York, this center will serve as a major scan site with coverage of participants from the Manhattan and nearby areas to the east (e.g., Brooklyn).</p>
-				</blockquote>
-			<p><b><em>Changes to Directory Structure on S3</em></b></p>
-				<blockquote>
-					<p>Users should note that the directory structure for HBN neuroimaging data on S3 has changed. Previously, data were stored under <em>fcp-indi/data/Projects/HBN/R[Release #]</em>, but now data from all releases will be stored cumulatively under two directories: <em>fcp-indi/data/Archives/HBN</em> and <em>fcp-indi/data/Projects/HBN</em>. Data for each participant will available in both a compressed format (.tar.gz) and uncompressed, under the <em>Archives/HBN</em> and <em>Projects/HBN directories</em>, respectively. Below is the new directory structure:</p>
-					<p>fcp-indi/data</p>
-					<ul>
-						<li>Projects/HBN
-							<ul>
-								<li>EEG
-									<ul>
-										<li>Sub-NDAR0000001</li>
-										<li>Sub-NDAR0000002</li>
-										<li>...</li>
-									</ul>
-								</li>
-								<li>MRI
-									<ul>
-										<li>Site-SI
-											<ul>
-												<li>Sub-NDAR0000001
-													<ul>
-														<li>anat</li>
-														<li>func</li>
-														<li>dwi</li>
-														<li>Fmap</li>
-													</ul>
-												</li>
-												<li>Sub-NDAR0000002</li>
-												<li>...</li>
-												<li>Derivatives <em>(Contains preprocessed data)</em></li>
-												<li>participants.tsv</li>
-												<li>dataset_description.json</li>
-											</ul>
-										</li>
-										<li>Site-RU
-										</li>
-										<li>Site-CBIC
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li>Archive/HBN
-							<ul>
-								<li>EEG
-									<ul>
-										<li>Sub-NDAR0000001.tar.gz</li>
-									</ul>
-								</li>
-								<li>MRI
-									<ul>
-										<li>Site-SI
-											<ul>
-												<li>Sub-NDAR0000001.tar.gz</li>
-												<li>...</li>
-												<li>participants.tsv</li>
-											</ul>
-										</li>
-										<li>Site-RU</li>
-										<li>Site-CBIC</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<p>Data will still be available for direct download on the neuroimaging downloads page, but only for compressed files.</p>
-				</blockquote>
-			<p><b><em>Integration of Prospective Motion Correction (In Progress)</em></b></p>
-				<blockquote>
-					<p>The most commonly cited challenge for the collection of data from children and hyperkinetic clinical populations is head motion. As part of an effort to minimize the impact of head motion on the collection of data from HBN participants, we have begun the process of adding prospective motion correction to our protocols. Specifically, the Align sequence used by the NIH ABCD Study was added at the CBIC site for the T1 and T2-SPACE images. For the purposes of maintaining continuity, and facilitating comparison of results, we have maintained acquisition of the initial T1 image at CBIC as well. Addition of the T1 at RUBIC is pending a port of the sequence to VB19A.</p>
-					<p><u>File Identifiers:</u></p>
-					<ul>
-						<li>T1 &mdash; HCP-based Sequence (no VNav) </li>
-						<li>T1 &mdash; ALIGN (VNav) </li>
-						<li>T2-SPACE &mdash; HCP-based Sequence (no VNav) </li>
-						<li>T2-SPACE &mdash; ALIGN (VNav) </li>
-					</ul>
-				</blockquote>
-			<p><b><em>Upcoming Protocol Changes</em></b></p>
-				<blockquote>
-					<p>Effective January 22, 2018, we will be changing the order of scans in the HBN protocol to maximize yield. Scan types are now classified as minimal, core and extended, to reflect priority.</p>
-					<p>Below we depict the change in protocol:</p>
-					<img src="_images/_release/R3_MRI_Protocol_Update.png" alt="Release 3 - Changes in MRI Protocol" />
-				</blockquote>
+			<ul>
+				<li><a class = "reference internal" href = "release/release_notes3.html">Release 3</a> (1/31/2018)</li>
+				<li><a class = "reference internal" href = "release/release_notes2_1.html">Release 2.1</a> (1/31/2018)</li>
+				<li><a class = "reference internal" href = "release/release_notes1_1.html">Release 1.1</a> (1/31/2018)</li>
+				<li><a class = "reference internal" href = "release/release_notes2.html">Release 2</a> (9/14/2017)</li>
+				<li><a class = "reference internal" href = "release/release_notes1.html">Release 1</a> (6/14/2017)</li>
+			<ul>
 		</div>
 	</div>
 
