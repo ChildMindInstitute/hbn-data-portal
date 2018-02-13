@@ -40,12 +40,12 @@
 <div class="section" id="mri">
 <h2>MRI Data<a class="headerlink" href="#mri" title="Permalink to this headline">¶</a></h2>
 <p>Consistent with recent major FCP/INDI data releases (i.e., the Consortium for Reliability and Reproducibility [CoRR](Zuo et al. 2014), Autism Brain Imaging Data Exchange 2 [ABIDE 2](Di Martino et al. 2017)), we made use of the Preprocessed Connectome Project Quality Assurance Protocol (QAP; Shehzad et al., 2013) to assess data quality for core MRI data modalities (i.e., functional MRI, morphometry MRI and diffusion MRI). The QAP includes a broad range of quantitative measures that have been proposed for assessing image data quality (see table below for list of measures and their definitions, adapted from (Di Martino et al. 2017)).</p>
-<img alt="QAP Measures" src="_images/_qc/neuro_qap_measures.png" style="display: block; margin: auto; width: 800px;"/>
+<img alt="QAP Measures" src="_images/_qc/neuro_qap_measures.png" style="display: block; margin: auto; max-width: 800px;"/>
 <p>Given commonly cited concerns about head motion during MRI scans, particularly during resting state fMRI scans, age-related differences in motion were examined. Head motion was quantified using frame-wise displacement (FD), which is calculated using root mean square deviation(Jenkinson et al. 2002). Mean FD is commonly used to evaluate the impact of movement on a dataset (Power et al. 2015), but it cannot distinguish between occasional large movements and frequent smaller movements, the effects of the former being likely easier to fix using scrubbing or an volume censoring methods. Consistent with this concern, the following figure demonstrates a nonlinear relationship between mean FD and median FD, with the latter providing a better indication of the amount of the data that can be retained after movement correction (e.g., volume censoring).</p>
-<img alt="Mean FD" src="_images/_qc/neuro_fd.png" style="display: block; margin: auto; width: 1000px;"/>
+<img alt="Mean FD" src="_images/_qc/neuro_fd.png" style="display: block; margin: auto; max-width: 1000px;"/>
 <p>Consistent with prior work (Power et al. 2012), both sites (the 1.5 Tesla mobile scanner in Staten Island and the 3 T fixed scanner at Rutgers University) exhibited negative associations between age and head motion for all functional scan types, with children between ages 5 and 8 exhibiting the greatest levels of movement. Median FD tended to be higher during the second half (5 minutes) of the resting state scan than during the first half; this observation resulted in our decision to split the scan into two 5-minute scans<!-- starting with participant #-->. As predicted by recent work highlighting the advantages of naturalistic viewing to minimize head motion, we found that head motion was significantly reduced during each of the movie-watching scan sessions (“Despicable Me,” “The Present”) relative to rest.</p>
 <p>Beyond the examination of temporal characteristics of the HBN data, we also applied the structural measures included in the PCP QA to each of the core data types collected (functional, diffusion, morphometry). See figure below for a subset of these measures. More information about the quality control process used for HBN MRI data can be found at the <a href="http://preprocessed-connectomes-project.org/quality-assessment-protocol/">PCP Assurance Protocol webpage</a>.</p>
-<img alt="Mean FD" src="_images/_qc/neuro_qap.png" style="display: block; margin: auto; width: 1000px;"/>
+<img alt="Mean FD" src="_images/_qc/neuro_qap.png" style="display: block; margin: auto; max-width: 800px;"/>
 </div>
 <div class="section" id="head-motion">
 <h2>Handling Head Motion in MRI Data<a class="headerlink" href="#head-motion" title="Permalink to this headline">¶</a></h2>
@@ -57,7 +57,7 @@
 <div class="section" id="eeg">
 <h2>EEG Data<a class="headerlink" href="#eeg" title="Permalink to this headline">¶</a></h2>
 <p>For each of the EEG acquisitions included, the figure below depicts the number of channels rejected based on the data distribution and variance of channels (threshold: > 3 standard deviations), as implemented in EEGLAB's pop_rejchan.m function (Delorme and Makeig 2004).</p>
-<img alt="Number of EEG Channels Rejected" src="_images/_qc/neuro_eeg.png" style="display: block; margin: auto; width: 800px;"/>
+<img alt="Number of EEG Channels Rejected" src="_images/_qc/neuro_eeg.png" style="display: block; margin: auto; max-width: 800px;"/>
 </div>
 </div>
 
@@ -93,9 +93,9 @@
 <li class="toctree-l1"><a class="reference internal" href="assessments.html">Assessments</a></li><ul>
 <li class="toctree-l2"><a class="reference internal" href="assessments.html#protocol-summary">Protocol Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assessments.html#diagnostic-tools">HBN Diagnostic Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assessments.html#protocol-timeline">HBN Protocol Timeline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assessments.html#behavioral-monitoring">Behavior Monitoring Technologies</a></li>
 </ul>
+<li class="toctree-l1"><a class="reference internal" href="protocol_timeline.html">Protocol Timeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="behavior.html">Behavior Monitoring Technologies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="demo.html">Sample Characteristics</a></li><ul>
 <li class="toctree-l2"><a class="reference internal" href="demo.html#age-and-sex-distributions">Age and Sex Distribution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="demo.html#DSM-5-diagnoses">DSM-5 Diagnoses</a></li>

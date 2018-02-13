@@ -206,7 +206,7 @@ div.body p.caption {
 }
 
 div.body td {
-    text-align: left;
+    text-align: center;
 }
 
 .field-list ul {
@@ -215,6 +215,10 @@ div.body td {
 
 .first {
     margin-top: 0 !important;
+}
+
+p + ul {
+	margin-top: -0.75em;
 }
 
 p.rubric {
@@ -332,7 +336,7 @@ table.footnote td, table.footnote th {
 }
 
 th {
-    text-align: left;
+    text-align: center;
     padding-right: 5px;
 }
 
