@@ -34,9 +34,85 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="support">
-<h1>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h1>
-<p>We are currently developing a dedicated page to help our users with any questions they may have. In the meantime, <a href="mailto:CMIDataUsage@childmind.org?Subject=Question Regarding HBN Data">please send any inquiries to CMIDataUsage@childmind.org</a>.</p>
+  <div class="section" id="faq">
+<h1>Frequently Asked Questions<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h1>
+<p>For questions not addressed on this page, please email <a href="mailto:CMIDataUsage@childmind.org?Subject=Question Regarding HBN Data">CMIDataUsage@childmind.org</a> or consult the <a href = "https://groups.google.com/forum/#!forum/hbn_biobank_forum">HBN Biobank support forum</a>.</p>
+
+<div>
+<p><b>Data Usage Agreement</b></p>
+<ul>
+	<li>Q: Is there a specific title that the individual signing the DUA as an institutional official should hold? Is this signature required?
+		<ul>
+			<li>
+				A: There is not a specific position an authorized official needs to hold, but he or she needs to be authorized to sign agreements that bind the institution, and must be an individual different from the principal investigator. This signature is required, and we will not accept a DUA that is missing this signature.
+			</li>
+		</ul>
+	</li>
+	<li>Q: If I intend on using HBN data at two different institutions, do I have to complete two separate DUA’s?
+		<ul>
+			<li>
+				A: Yes, the DUA is non-transferable between PI’s and institutions.
+			</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+<div>
+<p><b>Phenotypic Data</b></p>
+<ul>
+	<li>Q: Why are some of the participants with MRI/EEG data missing information in the “Basic_Demos” file?
+		<ul>
+			<li>
+				A: Not all participants with imaging data will have had phenotypic data released at the same time. You can see which participants have a full phenotypic file in the imaging phenotypic file from the imaging downloads page.
+			</li>
+		</ul>
+	</li>
+	<li>Q: When will genetic sampling data be released?
+		<ul>
+			<li>
+				A: At this time, we are not planning on releasing or running analysis on data for any genetic sampling (hair, blood, saliva, teeth). Those samples will be a stored in a repository indefinitely.
+			</li>
+		</ul>
+	</li>
+	<li>Q: In the phenotypic data, why is the coding for site different from the scan sites?
+		<ul>
+			<li>
+				A: Participants’ phenotypic and EEG data are collected at Staten Island, the mobile research vehicle (discontinued), and Midtown Manhattan, and MRI data are collected at Staten Island (discontinued), Rutgers (RUBIC), and Cornell (CBIC).
+			</li>
+		</ul>
+	</li>
+	<li>Q: How do I figure out which participants are healthy controls?
+		<ul>
+			<li>
+				A: The files Diagnosis_ClinicianConsensus and Diagnosis_KSADS contain diagnostic information for participants. While for most participants, diagnoses will be consistent between the clinician consensus and the computerized KSADS results (the clinician consensus diagnosis is determined from the KSADS results, as well as from other assessments), the clinician consensus diagnosis data include a wider range of diagnoses, including autism and learning disorders. Please note that there are also data available for non-computerized KSADS, although it is no longer administered. These data are labeled as KSADS_C and KSADS_P for present and current diagnoses, respectively.
+			</li>
+		</ul>
+	</li>
+	<li>Q: Where can I find data for ADOS and ADI-R?
+		<ul>
+			<li>
+				A: We don’t currently have any ADOS/ADI-R data available. We are in the process of transitioning from referring participants for an ADOS assessment at a different clinic to administering it internally.
+			</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+<div>
+<p><b>Neuroimaging Data</b></p>
+<ul>
+	<li>Q: Are there preprocessed data available? If so, where are they located, and is there documentation available?
+		<ul>
+			<li>
+				A: Preprocessed EEG data are available along with the raw data. The steps are the same ones used in the MIPDB study, and documentation can be found in the article under “EEG and eye tracking preprocessing steps”: https://www.nature.com/articles/sdata201740. MRI data have been preprocessed using Mindboggle and are available in S3 under the directory /fcp-indi/data/Projects/HBN/derivatives/Freesurfer_version6.0.0
+			</li>
+		</ul>
+	</li>
+</ul>
+
+</div>
+</div>
 </div>
 
 
